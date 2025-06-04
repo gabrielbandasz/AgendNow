@@ -1,0 +1,163 @@
+:root {
+  --bg-color: #0e0e1b;
+  --form-bg: #1a1a2e;
+  --text-color: #aef5c1;
+  --highlight: #00ff88;
+  --input-bg: #3a3a3a;
+  --button-text: #000;
+}
+
+body.light-theme {
+  --bg-color: #f0f0f0;
+  --form-bg: #ffffff;
+  --text-color: #333;
+  --highlight: #00cc66;
+  --input-bg: #eaeaea;
+  --button-text: #fff;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Botão de alternância de tema */
+#toggle-theme {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: var(--highlight);
+  color: var(--button-text);
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  box-shadow: 0 0 10px var(--highlight);
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Layout principal */
+.container {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.left {
+  flex: 1;
+  text-align: center;
+  padding: 40px;
+}
+
+.left h1 {
+  font-size: 2.5rem;
+  color: var(--highlight);
+  line-height: 1.2;
+  margin-top: 100px;
+}
+
+.left img {
+  width: 80%;
+  max-width: 400px;
+  margin-top: 20px;
+}
+
+.right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Formulário de login */
+.login-box {
+  background-color: var(--form-bg);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px var(--highlight);
+  width: 100%;
+  max-width: 350px;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.login-box h2 {
+  text-align: center;
+  color: var(--highlight);
+  margin-bottom: 20px;
+}
+
+.login-box label {
+  display: block;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: var(--text-color);
+}
+
+.login-box input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--input-bg);
+  color: var(--text-color);
+}
+
+.login-box .recuperar {
+  display: block;
+  text-align: right;
+  font-size: 0.8rem;
+  margin-top: 10px;
+  color: var(--highlight);
+  text-decoration: none;
+}
+
+.login-box button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+  background-color: var(--highlight);
+  color: var(--button-text);
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-box button:hover {
+  background-color: #00cc6a;
+}
+
+/* Logo no topo esquerdo */
+.logo-topo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 10;
+}
+
+/* Quadrado branco fixo */
+.logo-background {
+  width: 100px;
+  height: 50px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 0 10px var(--highlight);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Imagem da logo maior */
+.logo-img {
+  max-width: 190%;
+  max-height: 190%;
+  object-fit: contain;
+}
