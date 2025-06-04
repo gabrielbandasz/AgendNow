@@ -3,21 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Login - Agendfy</title>
+  <title>Login - AgendNow</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+ <body>
+  <div class="logo-topo">
+    <div class="logo-background">
+      <img src="img/logo.png" alt="Logo AgendNow" class="logo-img" />
+    </div>
+  </div>
+
   <button id="toggle-theme">🌙</button>
 
   <div class="container">
     <div class="left">
       <h1>Faça login<br>e entre para o nosso portal!</h1>
-
-      <div class="logo-container">
-        <div class="logo-background">
-          <img src="img/logo.png" alt="Logo AgendNow" class="logo-img" />
-        </div>
-      </div>
     </div>
 
     <div class="right">
@@ -25,10 +26,8 @@
         <h2>LOGIN</h2>
         <label for="usuario">Usuário</label>
         <input type="text" id="usuario" placeholder="Usuário" />
-
         <label for="senha">Senha</label>
         <input type="password" id="senha" placeholder="Senha" />
-
         <a href="#" class="recuperar">Recuperar senha?</a>
         <button class="login-btn">LOGIN</button>
       </div>
@@ -37,4 +36,5 @@
 
   <script src="script.js"></script>
 </body>
+
 </html>
