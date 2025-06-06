@@ -1,0 +1,190 @@
+:root {
+  --bg-color: #000000;
+  --form-bg: #0e0e2b;
+  --text-color: #1a7aff;
+  --highlight: #1a7aff;
+  --input-bg: #3a3a3a;
+  --button-text: #000;
+}
+
+body.light-theme {
+  --bg-color: #f0f0f0;
+  --form-bg: #ffffff;
+  --text-color: #4c91f3;
+  --highlight: #004aad;
+  --input-bg: #eaeaea;
+  --button-text: #fff;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+  
+}
+
+/* Botão de alternância de tema */
+#toggle-theme {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: var(--highlight);
+  color: var(--button-text);
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  box-shadow: 0 0 10px var(--highlight);
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Logo + texto “AgendNow” no canto superior esquerdo */
+.logo-topo {
+  position: absolute;
+  top: 15px;
+  left: 90px;
+  display: flex;
+  align-items: center;
+  gap: 1px;
+  z-index: 10;
+}
+
+.logo-img {
+  width: 50px; /* ou ajuste como preferir */
+  height: auto;
+  object-fit: contain;
+}
+
+.logo-text {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: #4c91f3;
+  margin: 0;
+}
+
+
+/* Layout principal */
+.container {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.left {
+  flex: 1;
+  text-align: center;
+  padding: 40px;
+}
+
+.left h1 {
+  font-size: 2.5rem;
+  color: var(--highlight);
+  line-height: 1.2;
+  margin-top: 100px;
+}
+
+.left img {
+  width: 80%;
+  max-width: 400px;
+  margin-top: 20px;
+}
+
+.right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Formulário de login */
+.login-box {
+  background-color: var(--form-bg);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px var(--highlight);
+  width: 100%;
+  max-width: 350px;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.login-box h2 {
+  text-align: center;
+  color: var(--highlight);
+  margin-bottom: 20px;
+}
+
+.login-box label {
+  display: block;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: var(--text-color);
+}
+
+.login-box input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--input-bg);
+  color: var(--text-color);
+}
+
+.login-box .recuperar {
+  display: block;
+  text-align: right;
+  font-size: 0.8rem;
+  margin-top: 10px;
+  color: var(--highlight);
+  text-decoration: none;
+}
+
+.login-box button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+  background-color: var(--highlight);
+  color: var(--button-text);
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-box button:hover {
+  background-color: #00cc6a;
+}
+
+.login-title-container {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+
+.login-title-container::before {
+  content: "";
+  background-image: url("imgLogin/computadorAzul.png"); /* coloque o caminho correto aqui */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.30; /* controla a ofuscação */
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 450px;
+  height: 450px;
+  z-index: 0;
+}
+
+.login-title-container h1 {
+  position: relative;
+  z-index: 1;
+}

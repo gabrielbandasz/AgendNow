@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cadastro - AgendNow</title>
+  <link rel="stylesheet" href="styleCadastroUsu.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Switch de tema -->
+  <label class="switch">
+    <input type="checkbox" id="theme-toggle-checkbox" />
+    <span class="slider"></span>
+  </label>
+
+  <!-- Formulário -->
+  <div class="form-wrapper">
+    <div class="form-card">
+      <div class="logo-wrapper">
+        <img src="imgCadastroUsu/logo.png" alt="Logo Agendify" class="logo" />
+        <h1 class="logo-text">AgendNow</h1>
+      </div>
+
+      <h1>Faça o seu Cadastro!</h1>
+
+      <form id="cadastroForm" novalidate>
+        <fieldset>
+          <legend>Cadastrar</legend>
+          <input type="text" placeholder="Digite seu nome completo" required />
+
+          <input type="email" id="email" name="email" required placeholder="seuemail@dominio.com" />
+          <small id="email-error" class="error-message">O e-mail não é válido!</small>
+
+          <input
+            type="tel"
+            id="telefone"
+            name="telefone"
+            placeholder="Telefone"
+            pattern="\(\d{2}\) \d{4,5}-\d{4}"
+            required
+          />
+
+          <input type="text" placeholder="CEP" id="cep" required />
+
+          <!-- Campo de Senha -->
+          <div class="password-wrapper">
+            <input type="password" id="senha" name="senha" required placeholder="Senha" />
+            <button type="button" class="toggle-password" onclick="togglePassword('senha', this)">Mostrar</button>
+          </div>
+
+          <!-- Campo de Confirmar Senha -->
+          <div class="password-wrapper">
+            <input
+              type="password"
+              id="confirmarSenha"
+              name="confirmarSenha"
+              required
+              placeholder="Confirmar senha"
+            />
+            <button type="button" class="toggle-password" onclick="togglePassword('confirmarSenha', this)">Mostrar</button>
+          </div>
+
+          <small id="senha-error" class="error-message">As senhas não coincidem</small>
+        </fieldset>
+
+        <button type="submit">Finalizar Cadastro</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="scriptCadastroUsu.js"></script>
+</body>
+</html>
